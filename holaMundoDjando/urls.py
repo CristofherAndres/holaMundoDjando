@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 #Importamos la aplicación para ver la vista
 from firstApp import views
+#importo la secondApp
+from secondApp import views as app2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,5 +26,6 @@ urlpatterns = [
     path('hola/',views.display),
     #agregamos otra vista
     path('ahora/',views.displayDateTime),
-    path('boton/',views.displayButton)
+    path('boton/',views.displayButton),
+    path('hola2/',app2.secondVista)
 ]
